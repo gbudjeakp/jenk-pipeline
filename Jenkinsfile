@@ -12,6 +12,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
+                cd nodeapp
+                npm install express
                 echo "doing build stuff.."
                 '''
             }
@@ -20,7 +22,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff.."
+                node hello.js
                 '''
             }
         }
