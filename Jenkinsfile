@@ -13,7 +13,6 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd nodeapp
-                npm install
                 npm install express
                 echo "doing build stuff.."
                 '''
